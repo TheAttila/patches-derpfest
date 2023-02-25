@@ -20,13 +20,13 @@ index 8f5851533929..3fb31499df69 100644
 --- a/packages/SystemUI/Android.bp
 +++ b/packages/SystemUI/Android.bp
 @@ -128,6 +128,7 @@ android_library {
-         "bcsmartspace-google",
          "faceunlock_framework",
          "vendor.lineage.powershare-V1.0-java",
+         "bcsmartspace-google",
 +        "vendor.goodix.hardware.biometrics.fingerprint-V2.1-java",
      ],
      manifest: "AndroidManifest.xml",
- 
+     additional_manifests: ["DerpFestManifest.xml"],
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
 index 24ff595ad369..29cddb1d9a4f 100644
 --- a/packages/SystemUI/res/values/config.xml
@@ -260,9 +260,9 @@ index aa0b20382da0..1541ae5ca0e5 100644
 --- a/services/core/Android.bp
 +++ b/services/core/Android.bp
 @@ -180,7 +180,12 @@ java_library_static {
-         "kotlin-stdlib",
          "kotlinx_coroutines_android",
          "kotlinx_coroutines",
+         "faceunlock_framework",
 -        "vendor.samsung.hardware.sysinput-V1.2-java", // HIDL
 +        // HIDL
 +        "vendor.samsung.hardware.sysinput-V1.2-java",
