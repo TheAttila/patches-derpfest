@@ -12,7 +12,7 @@ Change-Id: I481c1c8849b2f22a7cdfb2896a6d3c2e7e3b44d9
  3 files changed, 14 insertions(+), 5 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/qs/QuickStatusBarHeader.java b/packages/SystemUI/src/com/android/systemui/qs/QuickStatusBarHeader.java
-index 264edb1ec9e4..d8354149bae4 100644
+index 70906fea8610..af591ebc9f6c 100644
 --- a/packages/SystemUI/src/com/android/systemui/qs/QuickStatusBarHeader.java
 +++ b/packages/SystemUI/src/com/android/systemui/qs/QuickStatusBarHeader.java
 @@ -23,6 +23,7 @@ import android.content.res.Configuration;
@@ -23,9 +23,9 @@ index 264edb1ec9e4..d8354149bae4 100644
  import android.os.UserHandle;
  import android.provider.AlarmClock;
  import android.provider.Settings;
-@@ -263,8 +264,10 @@ public class QuickStatusBarHeader extends FrameLayout implements
- 
-         mConfigShowBatteryEstimate = resources.getBoolean(R.bool.config_showBatteryEstimateQSBH);
+@@ -272,8 +273,10 @@ public class QuickStatusBarHeader extends FrameLayout implements
+         mStatusIconsView.setVisibility(gone ? View.GONE : View.VISIBLE);
+         mDatePrivacyView.setVisibility(gone ? View.GONE : View.VISIBLE);
  
 -        mRoundedCornerPadding = resources.getDimensionPixelSize(
 -                R.dimen.rounded_corner_content_padding);
@@ -86,4 +86,3 @@ index c850d4f9c56b..af12f592398b 100644
                  rotatedResources.getDimensionPixelSize(R.dimen.ongoing_appops_dot_min_padding)
 -- 
 2.34.1
-
